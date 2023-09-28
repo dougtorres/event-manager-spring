@@ -25,12 +25,10 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	runtimeOnly("org.postgresql:postgresql")
+	implementation("mysql:mysql-connector-java:5.1.6")
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
 	implementation("org.springframework.boot:spring-boot-starter-security:3.1.3")
 	implementation("com.auth0:java-jwt:4.4.0")
-	//implementation("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.6.8")
-
 }
 
 tasks.withType<KotlinCompile> {

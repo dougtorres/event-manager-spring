@@ -1,13 +1,9 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/eventManager
-    username: postgres
-    password: 123
-
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+    url: jdbc:mysql://154.56.48.204:3306/u831664360_eventmanager
+    username: u831664360_eventmanager
+    password: O^7b499t
+    driver-class-name: com.mysql.jdbc.Driver
 
 api:
   security:
