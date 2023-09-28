@@ -19,17 +19,17 @@ jobs:
         uses: actions/setup-java@v1      
         with:        
          java-version: 1.19
+         
+      - uses: google-github-actions/setup-gcloud@v0.2.0
+        with:
+          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
 
       - name: Build with Gradle      
         run: gradle build
 
       - name: Build the Spring Project
         run: docker build -t $IMAGE_NAME .
-
-      - uses: google-github-actions/setup-gcloud@v0.2.0
-        with:
-          service_account_key: ${{ secrets.GCP_CREDENTIALS }}
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
 
       - name: Configure Docker
         run: gcloud auth configure-docker --quiet
